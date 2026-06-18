@@ -33,8 +33,8 @@ export const ContactSection: React.FC = () => {
 
         <div className="c-contact_layout">
           <div>
-            <a href="mailto:mike@example.com" className="c-contact_email">
-              mike@example.com
+            <a href="mailto:mikezueblin@gmail.com" className="c-contact_email">
+              mikezueblin@gmail.com
             </a>
             <div className="c-contact_links">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="c-contact_link">
@@ -51,11 +51,11 @@ export const ContactSection: React.FC = () => {
 
           <div>
             <p style={{ fontSize: 'clamp(1rem, 1.5vw, 1.25rem)', lineHeight: 1.5 }}>
-              Du hast ein Projekt, eine Idee oder willst einfach reden? 
-              Ich freue mich auf deine Nachricht.
+              Du suchst nach vielseitiger Verstärkung für dein Team oder hast Fragen 
+              zu meinem Werdegang? Ich freue mich auf deine Nachricht.
             </p>
             <div style={{ marginTop: '1.875rem' }}>
-              <a href="mailto:mike@example.com" className="c-button">
+              <a href="mailto:mikezueblin@gmail.com" className="c-button">
                 E-Mail senden
               </a>
             </div>

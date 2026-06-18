@@ -22,15 +22,14 @@ const skills = [
   'Baut interaktive Websites',
   'Designt Print-Layouts',
   'Erzählt visuelle Geschichten',
-  'Baut Communities auf',
+  'Leitet & bespielt Social Communities',
 ];
 
 const clientTypes = [
-  'eine Agentur mit Anspruch',
-  'ein Startup mit Vision',
-  'ein Unternehmen mit Haltung',
-  'eine Marke mit Charakter',
-  'ein Kreativer mit Ideen',
+  'ein Kreativ-Team, das Verstärkung sucht',
+  'eine Agentur, die einen Inhouse-Allrounder braucht',
+  'ein Unternehmen, das seine Community ausbauen will',
+  'eine Marke, die Content und Social Media vereinen möchte',
 ];
 
 export const AboutSection: React.FC = () => {
@@ -75,7 +74,7 @@ export const AboutSection: React.FC = () => {
       });
 
       // Shapes intro and loop
-      const shapes = gsap.utils.toArray('.c-shapes_item_inner > div');
+      const shapes = gsap.utils.toArray('.c-shapes_item_inner > div') as Element[];
       
       // Loop: pulse without disappearing
       const shapesTl = gsap.timeline({ repeat: -1, paused: true, delay: 1 });
@@ -132,7 +131,7 @@ export const AboutSection: React.FC = () => {
       {/* ===== TAGLINE ===== */}
       <div className="c-tagline">
         <h2>
-          {"Ich baue bewegte Bilder und interaktive Erlebnisse — mit Präzision, Geschmack und dem Blick fürs Wesentliche.".split(' ').map((word, i) => (
+          {"Ich baue bewegte Bilder, interaktive Erlebnisse und organische Communities auf.".split(' ').map((word, i) => (
             <span key={i} className="c-tagline_word" style={{ display: 'inline-block', paddingRight: '0.25em' }}>
               {word}
             </span>
@@ -216,14 +215,19 @@ export const AboutSection: React.FC = () => {
             <p>
               Du suchst jemanden, der Video, Motion und Web nicht nur kann, 
               sondern in einem Guss denkt — und der selbst versteht, wie 
-              Agenturen arbeiten?
+              Agenturen und Auftraggeber ticken? Meine Basis dafür: Die 
+              Ausbildung zum Mediamatiker EFZ bei der SIX Group in Zürich, 
+              wo Event-, Video- und AV-Arbeit Hand in Hand gingen.
             </p>
           </div>
           <div>
             <p>
-              Ich begleite dich von der Idee bis zum fertigen Produkt. 
-              Ob Werbespot, Showreel, Event-Doku oder interaktive Website — 
-              ich bringe die visuelle Sprache mit, die zu dir passt.
+              Angefangen in der Sek mit After Effects, arbeite ich heute an 
+              creator-geführten Formaten wie "House of Feelings". Was mich aber 
+              besonders macht, ist das Community-Building: Mit 15 habe ich eine 
+              DACH-weite E-Sports-Community mit über 20'000 Mitgliedern mit 
+              aufgebaut, heute bin ich Co-Owner eines kuratierten Editing-Kollektivs. 
+              Ich produziere nicht nur Videos, sondern baue nachhaltige Reichweite auf.
             </p>
           </div>
         </div>
