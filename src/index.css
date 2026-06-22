@@ -604,26 +604,162 @@ picture { display: block; max-width: 100%; }
 }
 
 .c-projects_list_item.is-open .c-projects_list_item_content {
-  max-height: 600px;
+  max-height: 1200px;
 }
 
 .c-projects_list_item_container {
   padding: 0 1.25rem 1.25rem;
 }
 
-.c-projects_list_item_images {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.25rem;
-  margin-top: 1.25rem;
+/* ===== IMAGE CAROUSEL ===== */
+
+.c-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.12);
 }
 
-.c-projects_list_item_images img,
-.c-projects_list_item_images video {
+.c-carousel_track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  gap: 0;
+}
+
+.c-carousel_track::-webkit-scrollbar {
+  display: none;
+}
+
+.c-carousel_slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.c-carousel_slide img {
+  display: block;
+  max-width: 100%;
+  max-height: 70vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.c-carousel_slide video {
+  display: block;
+  width: 100%;
+  max-height: 70vh;
+  background-color: #000;
+  border-radius: 2px;
+}
+
+.c-carousel_btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(30, 25, 21, 0.7);
+  color: #EEE9CC;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 5;
+}
+
+.c-carousel_btn:hover {
+  background-color: rgba(30, 25, 21, 0.95);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.c-carousel_btn.-prev { left: 0.75rem; }
+.c-carousel_btn.-next { right: 0.75rem; }
+
+.c-carousel_btn svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.c-carousel_dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 0;
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+.c-carousel_dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 1px solid #EEE9CC;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.c-carousel_dot.is-active {
+  background-color: #EEE9CC;
+  transform: scale(1.4);
+}
+
+.c-carousel_counter {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background-color: rgba(30, 25, 21, 0.6);
+  color: #EEE9CC;
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  z-index: 5;
+}
+
+/* ===== VIDEO GRID ===== */
+
+.c-projects_list_item_videos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 800px;
+}
+
+.c-projects_list_item_videos video {
   width: 100%;
   display: block;
-  aspect-ratio: 16/9;
-  object-fit: cover;
+  border-radius: 4px;
+  background-color: #000;
+}
+
+@media (max-width: 699px) {
+  .c-carousel_btn { width: 2rem; height: 2rem; }
+  .c-carousel_btn.-prev { left: 0.4rem; }
+  .c-carousel_btn.-next { right: 0.4rem; }
+  .c-carousel_btn svg { width: 1rem; height: 1rem; }
+  .c-carousel_dots { gap: 0.35rem; }
+  .c-carousel_slide { min-height: 200px; }
+  .c-carousel_slide img { max-height: 50vh; }
 }
 
 /* Button (from reference) */
