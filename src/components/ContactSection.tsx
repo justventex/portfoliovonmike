@@ -37,14 +37,11 @@ export const ContactSection: React.FC = () => {
               mikezueblin@gmail.com
             </a>
             <div className="c-contact_links">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="c-contact_link">
+              <a href="https://instagram.com/mikezublin" target="_blank" rel="noopener noreferrer" className="c-contact_link">
                 Instagram
               </a>
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="c-contact_link">
                 LinkedIn
-              </a>
-              <a href="https://behance.net" target="_blank" rel="noopener noreferrer" className="c-contact_link">
-                Behance
               </a>
             </div>
           </div>
@@ -65,7 +62,7 @@ export const ContactSection: React.FC = () => {
 
       {/* Footer bar */}
       <div className="c-contact_footer">
-        <span>© 2025 Mike Züblin</span>
+        <span>© 2026 Mike Züblin</span>
         <span>Mediamatiker EFZ</span>
       </div>
     </div>

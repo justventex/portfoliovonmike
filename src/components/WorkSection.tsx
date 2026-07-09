@@ -15,8 +15,9 @@ gsap.registerPlugin(ScrollTrigger);
  */
 
 interface MediaItem {
-  type: 'video' | 'image';
+  type: 'video' | 'image' | 'pdf';
   url: string;
+  label?: string;
 }
 
 interface ProjectItem {
@@ -35,7 +36,7 @@ const projects: ProjectItem[] = [
     id: 'konzertfotografie',
     title: 'Konzertfotografie',
     description: 'Live-Fotografie',
-    year: '2024',
+    year: '2022',
     tags: 'Fotografie – Konzert – Live',
     context: 'Konzertfotografie bei Live-Events. Einfangen von Energie, Licht und Bühnenpräsenz in Echtzeit — unter schwierigen Lichtverhältnissen und ohne zweite Chance.',
     media: [
@@ -58,7 +59,7 @@ const projects: ProjectItem[] = [
     id: 'produktfotografie',
     title: 'Produktfotografie',
     description: 'Studio-Fotografie',
-    year: '2024',
+    year: '2022',
     tags: 'Fotografie – Produkt – Studio',
     context: 'Professionelle Produktaufnahmen im Studio. Saubere Ausleuchtung, durchdachte Komposition und Postproduktion für den direkten Einsatz in Marketing und Social Media.',
     media: [
@@ -75,7 +76,7 @@ const projects: ProjectItem[] = [
     id: 'six-social',
     title: 'SIX ConventionPoint — Social',
     description: 'LinkedIn Content',
-    year: '2024',
+    year: '2025',
     tags: 'Social Media – Content Creation – LinkedIn',
     context: 'Content-Erstellung für die LinkedIn-Präsenz von SIX ConventionPoint. Visuelle Aufbereitung der Event-Spaces mit Before/After-Vergleichen und Werbevisuals für die Zielgruppe.',
     media: [
@@ -110,11 +111,15 @@ const projects: ProjectItem[] = [
     id: 'six-video',
     title: 'SIX — Videoproduktion',
     description: 'Corporate Video',
-    year: '2023–2024',
-    tags: 'Videoproduktion – Corporate – Event',
-    context: 'Corporate-Video-Produktionen für SIX Group: Leadership-Event-Dokumentationen, CEO-Kommunikation und interne Kampagnenvideos. Konzept, Dreh und Postproduktion aus einer Hand.',
+    year: '2023–2025',
+    tags: 'Videoproduktion – Corporate – Event – Recruiting',
+    context: 'Corporate-Video-Produktionen für SIX Group: Statement Basisseminar, Leadership-Events, Lernenden-Recruiting-Videos (EDB & KV), CEO-Kommunikation, QV-Abschlussfilm und Growth-Kampagnen. Konzept, Dreh und Postproduktion aus einer Hand.',
     media: [
-      { type: 'video', url: '/portfolio/six-videos/leadership_video.mp4' },
+      { type: 'video', url: '/portfolio/six-videos/statementbasisseminar.mp4' },
+      { type: 'video', url: '/portfolio/six-videos/leadership_video_v04.mp4' },
+      { type: 'video', url: '/portfolio/six-videos/lernendenvideo_edb.mp4' },
+      { type: 'video', url: '/portfolio/six-videos/lernendenvideo_kv.mp4' },
+      { type: 'video', url: '/portfolio/six-videos/qv_video_2025.mp4' },
       { type: 'video', url: '/portfolio/six-videos/growth_stairs.mp4' },
       { type: 'video', url: '/portfolio/six-videos/growth_dijsselhof.mp4' },
     ],
@@ -131,12 +136,26 @@ const projects: ProjectItem[] = [
       { type: 'image', url: '/portfolio/six-led/zukunftstag_led.png' },
     ],
   },
+  // ——— SIX: PRINT & LAYOUT ———
+  {
+    id: 'six-print',
+    title: 'SIX — Print & Layout',
+    description: 'Roll-Ups, Flyer, OnePager',
+    year: '2023–2024',
+    tags: 'Print – InDesign – Layout – Grafikdesign',
+    context: 'Print- und Layout-Arbeiten für SIX Group: Roll-Up-Design für das Referral Program, ScaleUP OnePager (A3) und englischsprachiger Flyer für den Standort Warschau.',
+    media: [
+      { type: 'pdf', url: '/portfolio/six-print/rollup_referral.pdf', label: 'Roll-Up Referral Program' },
+      { type: 'pdf', url: '/portfolio/six-print/scaleup_onepager.pdf', label: 'ScaleUP OnePager A3' },
+      { type: 'pdf', url: '/portfolio/six-print/working_in_warsaw.pdf', label: 'Working in Warsaw Flyer' },
+    ],
+  },
   // ——— PORTFOLIO WEBSITE ———
   {
     id: 'portfolio',
     title: 'Portfolio Website',
     description: 'Interaktives Web',
-    year: '2025',
+    year: '2026',
     tags: 'Webdesign – React – GSAP – Three.js',
     context: 'Diese Website selbst als interaktives Arbeitsbeispiel. Gebaut mit React, GSAP ScrollTrigger und Vite. Responsive Design, Scroll-Animationen und ein sauberes, modulares Komponentensystem.',
     media: [],
@@ -179,13 +198,23 @@ const MediaCarousel: React.FC<{ items: MediaItem[] }> = ({ items }) => {
           >
             {item.type === 'image' ? (
               <img src={item.url} alt="" loading="lazy" />
-            ) : (
+            ) : item.type === 'video' ? (
               <video
                 src={item.url}
                 controls
                 preload="metadata"
                 playsInline
               />
+            ) : (
+              <div className="c-carousel_pdf">
+                <iframe src={item.url} title={item.label || 'PDF'} />
+                <div className="c-carousel_pdf_footer">
+                  <span>{item.label || 'PDF Dokument'}</span>
+                  <a href={item.url} target="_blank" rel="noopener noreferrer">
+                    Öffnen ↗
+                  </a>
+                </div>
+              </div>
             )}
           </div>
         ))}
@@ -354,6 +383,11 @@ export const WorkSection: React.FC = () => {
             </article>
           );
         })}
+      </div>
+
+      {/* Portfolio-in-progress notice */}
+      <div className="c-projects_notice">
+        <p>Weitere Arbeiten werden laufend ergänzt — dieses Portfolio wächst.</p>
       </div>
     </div>
   );

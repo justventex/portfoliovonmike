@@ -66,26 +66,129 @@ picture { display: block; max-width: 100%; }
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-.c-loading_label_wrap {
+/* Subtle grain overlay */
+.c-loading::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Corner marks */
+.c-loading_corner {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-color: rgba(238, 233, 204, 0.2);
+  border-style: solid;
+  z-index: 1;
+}
+
+.c-loading_corner.-tl {
+  top: 1.5rem; left: 1.5rem;
+  border-width: 1px 0 0 1px;
+}
+
+.c-loading_corner.-tr {
+  top: 1.5rem; right: 1.5rem;
+  border-width: 1px 1px 0 0;
+}
+
+.c-loading_corner.-bl {
+  bottom: 1.5rem; left: 1.5rem;
+  border-width: 0 0 1px 1px;
+}
+
+.c-loading_corner.-br {
+  bottom: 1.5rem; right: 1.5rem;
+  border-width: 0 1px 1px 0;
+}
+
+/* Content wrapper */
+.c-loading_content {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.75rem;
 }
 
-.c-loading_label {
-  overflow: hidden;
+/* Animated initials */
+.c-loading_initials {
+  display: flex;
   line-height: 1;
-  margin: 0;
+  gap: 0;
+  clip-path: inset(-20% -5% 0% -5%);
 }
 
-.c-loading_label_inner {
-  display: block;
-  transform: translateY(100%);
-  font-size: clamp(3rem, 8vw, 8rem);
+.c-loading_letter {
+  display: inline-block;
+  font-size: clamp(2.2rem, 7vw, 5.5rem);
   font-weight: 400;
   color: #EEE9CC;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  will-change: transform, opacity;
+}
+
+.c-loading_letter.-space {
+  width: 0.35em;
+}
+
+/* Subtitle */
+.c-loading_subtitle {
+  font-size: clamp(0.65rem, 1.2vw, 0.85rem);
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  color: rgba(238, 233, 204, 0.5);
+  opacity: 0;
+}
+
+/* Progress area pinned to bottom */
+.c-loading_progress_area {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 2;
+}
+
+.c-loading_progress_track {
+  flex: 1;
+  height: 1px;
+  background-color: rgba(238, 233, 204, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.c-loading_progress_bar {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: #EEE9CC;
+  transform-origin: left center;
+  transform: scaleX(0);
+  will-change: transform;
+}
+
+.c-loading_progress_num {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: rgba(238, 233, 204, 0.45);
+  min-width: 2.5rem;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
 }
 
 /* ===== MENU ===== */
@@ -611,6 +714,20 @@ picture { display: block; max-width: 100%; }
   padding: 0 1.25rem 1.25rem;
 }
 
+/* Portfolio notice */
+.c-projects_notice {
+  padding: 2.5rem 1.25rem;
+  text-align: center;
+}
+
+.c-projects_notice p {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  opacity: 0.4;
+  line-height: 1.6;
+}
+
 /* ===== IMAGE CAROUSEL ===== */
 
 .c-carousel {
@@ -659,6 +776,41 @@ picture { display: block; max-width: 100%; }
   max-height: 70vh;
   background-color: #000;
   border-radius: 2px;
+}
+
+.c-carousel_pdf {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.c-carousel_pdf iframe {
+  width: 100%;
+  height: 60vh;
+  border: none;
+  background-color: #fff;
+}
+
+.c-carousel_pdf_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: rgba(30, 25, 21, 0.8);
+  font-size: 0.8rem;
+  backdrop-filter: blur(8px);
+}
+
+.c-carousel_pdf_footer a {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.7rem;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.c-carousel_pdf_footer a:hover {
+  opacity: 1;
 }
 
 .c-carousel_btn {
