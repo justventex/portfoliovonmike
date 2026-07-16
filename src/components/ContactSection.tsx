@@ -40,7 +40,7 @@ export const ContactSection: React.FC = () => {
               <a href="https://instagram.com/mikezublin" target="_blank" rel="noopener noreferrer" className="c-contact_link">
                 Instagram
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="c-contact_link">
+              <a href="https://www.linkedin.com/in/mikezueblin" target="_blank" rel="noopener noreferrer" className="c-contact_link">
                 LinkedIn
               </a>
             </div>

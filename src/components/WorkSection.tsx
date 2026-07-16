@@ -15,7 +15,7 @@ gsap.registerPlugin(ScrollTrigger);
  */
 
 interface MediaItem {
-  type: 'video' | 'image' | 'pdf';
+  type: 'video' | 'image' | 'pdf' | 'youtube';
   url: string;
   label?: string;
 }
@@ -31,138 +31,158 @@ interface ProjectItem {
 }
 
 const projects: ProjectItem[] = [
-  // ——— KONZERTFOTOGRAFIE ———
+  // ——— FILM & KURZFILM ———
   {
-    id: 'konzertfotografie',
-    title: 'Konzertfotografie',
-    description: 'Live-Fotografie',
+    id: 'the-image-film',
+    title: 'The Image Film',
+    description: 'BBC Awardwinner',
     year: '2022',
-    tags: 'Fotografie – Konzert – Live',
-    context: 'Konzertfotografie bei Live-Events. Einfangen von Energie, Licht und Bühnenpräsenz in Echtzeit — unter schwierigen Lichtverhältnissen und ohne zweite Chance.',
+    tags: 'Film – Kurzfilm – Award',
+    context: 'Preisgekrönter Kurzfilm, ausgezeichnet mit einem BBC Award. Konzept, Regie und Postproduktion.',
     media: [
-      { type: 'image', url: '/portfolio/konzertfotografie/IRA-08804.webp' },
-      { type: 'image', url: '/portfolio/konzertfotografie/IRA-08813.webp' },
-      { type: 'image', url: '/portfolio/konzertfotografie/IRA-08819.webp' },
-      { type: 'image', url: '/portfolio/konzertfotografie/IRA-08843.webp' },
-      { type: 'image', url: '/portfolio/konzertfotografie/IRA-08876-0.webp' },
-      { type: 'image', url: '/portfolio/konzertfotografie/IRA-08886.webp' },
-      { type: 'image', url: '/portfolio/konzertfotografie/IRA-08889.webp' },
-      { type: 'image', url: '/portfolio/konzertfotografie/IRA-08892.webp' },
-      { type: 'image', url: '/portfolio/konzertfotografie/IRA-08897.webp' },
-      { type: 'image', url: '/portfolio/konzertfotografie/IRA-08904.webp' },
-      { type: 'image', url: '/portfolio/konzertfotografie/IRA-08908.webp' },
-      { type: 'image', url: '/portfolio/konzertfotografie/IRA-08909.webp' },
+      { type: 'youtube', url: 'Up1Qaab4dIA', label: 'The Image Film' },
     ],
   },
-  // ——— PRODUKTFOTOGRAFIE ———
   {
-    id: 'produktfotografie',
-    title: 'Produktfotografie',
-    description: 'Studio-Fotografie',
-    year: '2022',
-    tags: 'Fotografie – Produkt – Studio',
-    context: 'Professionelle Produktaufnahmen im Studio. Saubere Ausleuchtung, durchdachte Komposition und Postproduktion für den direkten Einsatz in Marketing und Social Media.',
-    media: [
-      { type: 'image', url: '/portfolio/produktfotografie/produkt_01.webp' },
-      { type: 'image', url: '/portfolio/produktfotografie/produkt_02.webp' },
-      { type: 'image', url: '/portfolio/produktfotografie/produkt_03.webp' },
-      { type: 'image', url: '/portfolio/produktfotografie/produkt_04.webp' },
-      { type: 'image', url: '/portfolio/produktfotografie/produkt_05.webp' },
-      { type: 'image', url: '/portfolio/produktfotografie/produkt_06.webp' },
-    ],
-  },
-  // ——— SIX CONVENTIONPOINT: SOCIAL MEDIA CONTENT ———
-  {
-    id: 'six-social',
-    title: 'SIX ConventionPoint — Social',
-    description: 'LinkedIn Content',
+    id: 'hirnchips-ki',
+    title: 'Hirnchips und Full Dive KI',
+    description: 'Video-Essay',
     year: '2025',
-    tags: 'Social Media – Content Creation – LinkedIn',
-    context: 'Content-Erstellung für die LinkedIn-Präsenz von SIX ConventionPoint. Visuelle Aufbereitung der Event-Spaces mit Before/After-Vergleichen und Werbevisuals für die Zielgruppe.',
+    tags: 'Film – Essay – KI – Dokumentation',
+    context: 'Werden wir kontrolliert? Ein Video-Essay über Hirnchips, Full-Dive-Technologie und künstliche Intelligenz.',
     media: [
-      { type: 'image', url: '/portfolio/six-social/eventspaces_intro.png' },
-      { type: 'image', url: '/portfolio/six-social/AuditoriumWerb11.png' },
-      { type: 'image', url: '/portfolio/six-social/foyer1werb11.png' },
-      { type: 'image', url: '/portfolio/six-social/1_beofreafteraudiselnau.png' },
-      { type: 'image', url: '/portfolio/six-social/2_beofreafteraudi htp.png' },
-      { type: 'image', url: '/portfolio/six-social/3_beofreafterfoyerselnau.png' },
-      { type: 'image', url: '/portfolio/six-social/4_beofreafterfoyer htp.png' },
-      { type: 'image', url: '/portfolio/six-social/5_beforeaftercreateselnau.png' },
-      { type: 'image', url: '/portfolio/six-social/6_beofreaftercreate htp.png' },
+      { type: 'youtube', url: 'oLBJqW3rcT4', label: 'Hirnchips und Full Dive KI' },
     ],
   },
-  // ——— SIX: MOTION DESIGN & ANIMATION ———
   {
-    id: 'six-animation',
-    title: 'SIX — Motion Design',
-    description: 'Animation & Loops',
-    year: '2023–2024',
-    tags: 'Motion Design – After Effects – Animation',
-    context: 'Motion-Design-Arbeiten für SIX Group: Opener-Animationen für Produkt-Events, Weihnachtsgruss-Animation fürs Finanzmuseum, IPO-Countdown-Visuals und Event-Loops.',
-    media: [
-      { type: 'video', url: '/portfolio/six-animation/opener_product_flash.mp4' },
-      { type: 'video', url: '/portfolio/six-animation/finanzmuseum_weihnachten.mp4' },
-      { type: 'video', url: '/portfolio/six-animation/ipo_countdown.mp4' },
-      { type: 'video', url: '/portfolio/six-animation/kunst_macht_geld.mp4' },
-    ],
-  },
-  // ——— SIX: VIDEOPRODUKTION ———
-  {
-    id: 'six-video',
-    title: 'SIX — Videoproduktion',
-    description: 'Corporate Video',
-    year: '2023–2025',
-    tags: 'Videoproduktion – Corporate – Event – Recruiting',
-    context: 'Corporate-Video-Produktionen für SIX Group: Statement Basisseminar, Leadership-Events, Lernenden-Recruiting-Videos (EDB & KV), CEO-Kommunikation, QV-Abschlussfilm und Growth-Kampagnen. Konzept, Dreh und Postproduktion aus einer Hand.',
-    media: [
-      { type: 'video', url: '/portfolio/six-videos/statementbasisseminar.mp4' },
-      { type: 'video', url: '/portfolio/six-videos/leadership_video_v04.mp4' },
-      { type: 'video', url: '/portfolio/six-videos/lernendenvideo_edb.mp4' },
-      { type: 'video', url: '/portfolio/six-videos/lernendenvideo_kv.mp4' },
-      { type: 'video', url: '/portfolio/six-videos/qv_video_2025.mp4' },
-      { type: 'video', url: '/portfolio/six-videos/growth_stairs.mp4' },
-      { type: 'video', url: '/portfolio/six-videos/growth_dijsselhof.mp4' },
-    ],
-  },
-  // ——— SIX: LED VISUALS ———
-  {
-    id: 'six-led',
-    title: 'SIX — LED Visuals',
-    description: 'Lobby-Displays',
-    year: '2024',
-    tags: 'Visual Design – LED – Event',
-    context: 'Gestaltung von Visuals für die LED-Wände in der Lobby des SIX ConventionPoint. Anpassung an verschiedene Events und Anlässe wie den Zukunftstag.',
-    media: [
-      { type: 'image', url: '/portfolio/six-led/zukunftstag_led.png' },
-    ],
-  },
-  // ——— SIX: PRINT & LAYOUT ———
-  {
-    id: 'six-print',
-    title: 'SIX — Print & Layout',
-    description: 'Roll-Ups, Flyer, OnePager',
-    year: '2023–2024',
-    tags: 'Print – InDesign – Layout – Grafikdesign',
-    context: 'Print- und Layout-Arbeiten für SIX Group: Roll-Up-Design für das Referral Program, ScaleUP OnePager (A3) und englischsprachiger Flyer für den Standort Warschau.',
-    media: [
-      { type: 'pdf', url: '/portfolio/six-print/rollup_referral.pdf', label: 'Roll-Up Referral Program' },
-      { type: 'pdf', url: '/portfolio/six-print/scaleup_onepager.pdf', label: 'ScaleUP OnePager A3' },
-      { type: 'pdf', url: '/portfolio/six-print/working_in_warsaw.pdf', label: 'Working in Warsaw Flyer' },
-    ],
-  },
-  // ——— PORTFOLIO WEBSITE ———
-  {
-    id: 'portfolio',
-    title: 'Portfolio Website',
-    description: 'Interaktives Web',
+    id: 'house-of-feelings',
+    title: 'House of Feelings',
+    description: 'Episoden & Promo',
     year: '2026',
-    tags: 'Webdesign – React – GSAP – Three.js',
-    context: 'Diese Website selbst als interaktives Arbeitsbeispiel. Gebaut mit React, GSAP ScrollTrigger und Vite. Responsive Design, Scroll-Animationen und ein sauberes, modulares Komponentensystem.',
-    media: [],
+    tags: 'Film – Serie – Kurzfilm – Promo',
+    context: 'Episodenszenen und Promo-Material für das Projekt «House of Feelings». Regie, Schnitt und visuelle Gestaltung.',
+    media: [
+      { type: 'youtube', url: 'Fjcmb-lewuo', label: 'Promo Clip' },
+      { type: 'youtube', url: 'g3n5jhRnWB8', label: 'Episode Scene' },
+      { type: 'youtube', url: 'ELReM9oQoTs', label: 'Episode Scene 2' },
+    ],
+  },
+  // ——— CORPORATE VIDEO & PROMO ———
+  {
+    id: 'berufserklaerung-edb',
+    title: 'Berufserklärung EDB',
+    description: 'Recruiting-Video',
+    year: '2023',
+    tags: 'Corporate – Recruiting – Erklärvideo',
+    context: 'Recruiting-Video für die EDB-Berufserklärung. Konzept, Dreh und Postproduktion.',
+    media: [
+      { type: 'youtube', url: '0kXO_J4pCAw', label: 'Berufserklärung EDB' },
+    ],
+  },
+  {
+    id: 'statement-basisseminar',
+    title: 'Statement Basisseminar',
+    description: 'Event-Video',
+    year: '2024',
+    tags: 'Corporate – Event – Dokumentation',
+    context: 'Videoproduktion für das Statement Basisseminar. Event-Dokumentation und Zusammenschnitt.',
+    media: [
+      { type: 'youtube', url: 'raFCjID6vTw', label: 'Statement Basisseminar' },
+    ],
+  },
+  {
+    id: 'promo-autovermietung',
+    title: 'Promo Autovermietung',
+    description: 'Werbespot',
+    year: '2024',
+    tags: 'Promo – Werbung – Automotive',
+    context: 'Promotionvideo für eine Autovermietung. Visuelle Inszenierung und dynamischer Schnitt.',
+    media: [
+      { type: 'youtube', url: 'jCA-m0R0WY8', label: 'Promo Autovermietung' },
+    ],
+  },
+  {
+    id: 'six-conventionpoint-werbeflaechen',
+    title: 'SIX ConventionPoint Werbeflächen — IPA',
+    description: 'Abschlussarbeit (IPA)',
+    year: '2024',
+    tags: 'Corporate – Werbung – Konzept – IPA',
+    context: 'Werbeflächenkonzept für den SIX ConventionPoint — realisiert als individuelle praktische Abschlussarbeit (IPA). Visuelle Aufbereitung und Präsentation.',
+    media: [
+      { type: 'youtube', url: 'i08ObUDM0yA', label: 'ConventionPoint Werbeflächen' },
+    ],
+  },
+  {
+    id: 'qv-abschlussfeier',
+    title: 'QV Abschlussfeier',
+    description: 'Event-Video',
+    year: '2025',
+    tags: 'Corporate – Event – Abschluss',
+    context: 'Abschlussfilm für die QV-Abschlussfeier 2025. Dokumentation und emotionaler Zusammenschnitt.',
+    media: [
+      { type: 'youtube', url: 'ttOGGOb9hjE', label: 'QV Abschlussfeier' },
+    ],
+  },
+  // ——— ANIMATION & MOTION DESIGN ———
+  {
+    id: 'finanzmuseum-weihnachten',
+    title: 'Finanzmuseum Weihnachtsanimation',
+    description: 'Motion Design',
+    year: '2024',
+    tags: 'Animation – Motion Design – After Effects',
+    context: 'Weihnachtsgruss-Animation für das Finanzmuseum. Konzept und Animation in After Effects.',
+    media: [
+      { type: 'youtube', url: 'gxi-7CWMh9A', label: 'Finanzmuseum Weihnachten' },
+    ],
+  },
+  {
+    id: 'ceo-scaleup-animation',
+    title: 'CEO Scale Up Animation',
+    description: 'Motion Graphics',
+    year: '2024',
+    tags: 'Animation – Corporate – Motion Graphics',
+    context: 'Opener-Animation für ein CEO-Scale-Up-Event. Dynamische Motion Graphics und Typografie.',
+    media: [
+      { type: 'youtube', url: '0uYueOg-IDI', label: 'CEO Scale Up Animation' },
+    ],
+  },
+  {
+    id: 'kunstmachtgeld-logo',
+    title: 'KunstMachtGeld Logoanimation',
+    description: 'Logo-Animation',
+    year: '2025',
+    tags: 'Animation – Logo – Branding',
+    context: 'Animiertes Logo für das Projekt «KunstMachtGeld». Konzept und Umsetzung.',
+    media: [
+      { type: 'youtube', url: 'KNVlhkb7kNU', label: 'KunstMachtGeld Logo' },
+    ],
+  },
+  // ——— 3D & VISUAL EFFECTS ———
+  {
+    id: '3d-headtracking',
+    title: '3D Headtracking — Intro Scene',
+    description: '3D Animation',
+    year: '2023',
+    tags: '3D – Cinema 4D – Visual Effects',
+    context: '3D-Headtracking-Intro-Szene. Realistische 3D-Animation und Compositing.',
+    media: [
+      { type: 'youtube', url: 'dr7e95fCZ2Q', label: '3D Headtracking Intro' },
+    ],
+  },
+  {
+    id: '3d-typography',
+    title: '3D Typography Scene',
+    description: '3D Animation',
+    year: '2023',
+    tags: '3D – Typografie – Visual Effects',
+    context: '3D-Typografie-Szene. Dreidimensionale Buchstaben-Animation und Lichtgestaltung.',
+    media: [
+      { type: 'youtube', url: 'GmE036JMVSI', label: '3D Typography Scene' },
+    ],
   },
 ];
 
-/* ===== MEDIA CAROUSEL (images + videos unified) ===== */
+/* ===== MEDIA CAROUSEL (images + videos + youtube unified) ===== */
 const MediaCarousel: React.FC<{ items: MediaItem[] }> = ({ items }) => {
   const [current, setCurrent] = useState(0);
   const trackRef = useRef<HTMLDivElement>(null);
@@ -196,7 +216,16 @@ const MediaCarousel: React.FC<{ items: MediaItem[] }> = ({ items }) => {
             key={i}
             className={`c-carousel_slide ${i === current ? 'is-active' : ''}`}
           >
-            {item.type === 'image' ? (
+            {item.type === 'youtube' ? (
+              <div className="c-carousel_youtube">
+                <iframe
+                  src={`https://www.youtube.com/embed/${item.url}`}
+                  title={item.label || 'YouTube Video'}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            ) : item.type === 'image' ? (
               <img src={item.url} alt="" loading="lazy" />
             ) : item.type === 'video' ? (
               <video
