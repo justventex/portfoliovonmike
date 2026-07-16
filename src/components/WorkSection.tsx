@@ -223,6 +223,7 @@ const MediaCarousel: React.FC<{ items: MediaItem[] }> = ({ items }) => {
                   title={item.label || 'YouTube Video'}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
+                  loading="lazy"
                 />
               </div>
             ) : item.type === 'image' ? (
@@ -236,7 +237,7 @@ const MediaCarousel: React.FC<{ items: MediaItem[] }> = ({ items }) => {
               />
             ) : (
               <div className="c-carousel_pdf">
-                <iframe src={item.url} title={item.label || 'PDF'} />
+                <iframe src={item.url} title={item.label || 'PDF'} loading="lazy" />
                 <div className="c-carousel_pdf_footer">
                   <span>{item.label || 'PDF Dokument'}</span>
                   <a href={item.url} target="_blank" rel="noopener noreferrer">
