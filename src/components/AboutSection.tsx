@@ -257,6 +257,11 @@ export const AboutSection: React.FC = () => {
           <span>InDesign</span>
           <span>Lightroom Classic</span>
           <span>Figma</span>
+          <span>React & Vite</span>
+          <span>HTML & CSS</span>
+          <span>Discord (Community)</span>
+          <span>Notion (Organisation)</span>
+          <span>AI & Vibecoding</span>
         </div>
       </div>
     </div>
