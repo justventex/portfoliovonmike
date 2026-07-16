@@ -39,14 +39,20 @@ export const Hero: React.FC = () => {
       });
 
       // Animate text chars in
-      gsap.from('.c-home_line', {
-        x: '-100%',
-        opacity: 0,
-        duration: 1.2,
-        stagger: 0.1,
-        ease: 'power4.out',
-        delay: 1.0,
-      });
+      gsap.fromTo('.c-home_line',
+        {
+          x: '-100%',
+          opacity: 0,
+        },
+        {
+          x: '0%',
+          opacity: 1,
+          duration: 1.2,
+          stagger: 0.1,
+          ease: 'power4.out',
+          delay: 1.0,
+        }
+      );
 
       // Animate labels in
       gsap.utils.toArray('.c-home_line_sup').forEach((el, i) => {

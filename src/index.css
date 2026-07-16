@@ -127,6 +127,8 @@ picture { display: block; max-width: 100%; }
   line-height: 1;
   gap: 0;
   clip-path: inset(-20% -5% 0% -5%);
+  -webkit-clip-path: inset(-20% -5% 0% -5%);
+  transform: translateZ(0);
 }
 
 .c-loading_letter {
@@ -137,6 +139,8 @@ picture { display: block; max-width: 100%; }
   text-transform: uppercase;
   letter-spacing: 0.12em;
   will-change: transform, opacity;
+  transform: translateZ(0); /* Fix Windows Chromium large font rendering bug */
+  -webkit-font-smoothing: antialiased;
 }
 
 .c-loading_letter.-space {
@@ -344,6 +348,8 @@ picture { display: block; max-width: 100%; }
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: -0.02em;
+  transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
 }
 
 .c-home_line_wrap.-right {
@@ -377,8 +383,11 @@ picture { display: block; max-width: 100%; }
 }
 
 .c-home_line {
+  opacity: 0;
   white-space: nowrap;
   display: inline-block;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 /* Small label annotations on hero lines */
@@ -628,7 +637,9 @@ picture { display: block; max-width: 100%; }
   text-transform: uppercase;
   line-height: 1;
   white-space: nowrap;
-  padding: 0 1.25rem;
+  padding-right: 5vw;
+  transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Project list header */
