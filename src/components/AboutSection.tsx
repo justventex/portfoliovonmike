@@ -122,6 +122,19 @@ export const AboutSection: React.FC = () => {
           start: 'top 80%',
         },
       });
+
+      // Tech stack stagger
+      gsap.from('.c-about_techstack_list span', {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.1,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: '.c-about_techstack',
+          start: 'top 85%',
+        },
+      });
     }, sectionRef);
 
     return () => ctx.revert();
@@ -231,6 +244,19 @@ export const AboutSection: React.FC = () => {
               Ich produziere nicht nur Videos, sondern baue nachhaltige Reichweite auf.
             </p>
           </div>
+        </div>
+      </div>
+
+      {/* ===== TECH STACK ===== */}
+      <div className="c-about_techstack">
+        <span className="c-about_techstack_label">Software & Tools</span>
+        <div className="c-about_techstack_list">
+          <span>Premiere Pro</span>
+          <span>After Effects</span>
+          <span>Photoshop</span>
+          <span>InDesign</span>
+          <span>Lightroom Classic</span>
+          <span>Figma</span>
         </div>
       </div>
     </div>

@@ -607,6 +607,41 @@ picture { display: block; max-width: 100%; }
   padding: 1.25rem 0 10rem;
 }
 
+/* ===== TECH STACK ===== */
+.c-about_techstack {
+  padding: 5rem 1.25rem;
+  border-bottom: 1px solid #EEE9CC;
+}
+
+.c-about_techstack_label {
+  display: block;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 2.5rem;
+  opacity: 0.6;
+}
+
+.c-about_techstack_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 400;
+}
+
+.c-about_techstack_list span {
+  border: 1px solid rgba(238, 233, 204, 0.3);
+  padding: 0.75rem 1.75rem;
+  border-radius: 100px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.c-about_techstack_list span:hover {
+  border-color: #EEE9CC;
+  background-color: rgba(238, 233, 204, 0.05);
+}
+
 .c-about_you_details_layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
