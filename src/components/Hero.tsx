@@ -54,9 +54,9 @@ export const Hero: React.FC = () => {
         }
       );
 
-      // Animate labels in
-      gsap.utils.toArray('.c-home_line_sup').forEach((el, i) => {
-        gsap.delayedCall(2.2 + i * 0.2, () => (el as Element).classList.add('is-visible'));
+      // Animate labels in (all at once instead of staggered sequence)
+      gsap.utils.toArray('.c-home_line_sup').forEach((el) => {
+        gsap.delayedCall(2.2, () => (el as Element).classList.add('is-visible'));
       });
 
       // Venetian Blinds Slideshow Animation

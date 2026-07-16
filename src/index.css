@@ -537,6 +537,11 @@ picture { display: block; max-width: 100%; }
   left: 1.25rem;
 }
 
+.c-shapes_item_inner > div {
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
+
 /* Square */
 .c-shapes_item_inner.-square > div {
   position: absolute;

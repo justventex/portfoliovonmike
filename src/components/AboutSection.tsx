@@ -59,14 +59,14 @@ export const AboutSection: React.FC = () => {
 
     const ctx = gsap.context(() => {
       // Tagline cinematic blur & tracking reveal
-      gsap.from('.c-tagline_word', {
-        opacity: 0,
-        filter: 'blur(12px)',
-        letterSpacing: '0.3em',
-        scale: 1.1,
-        duration: 1.5,
-        stagger: 0.05,
-        ease: 'power3.out',
+      gsap.fromTo('.c-tagline_word', 
+        { opacity: 0, y: 20 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.2,
+          stagger: 0.05,
+          ease: 'power3.out',
         scrollTrigger: {
           trigger: '.c-tagline',
           start: 'top 75%',
@@ -83,11 +83,12 @@ export const AboutSection: React.FC = () => {
                 .to(shape, { scale: 1, duration: 0.5, ease: 'bounce.out', delay: 0.1 });
       });
 
-      // Intro: pop in
-      gsap.from(shapes, {
-        scale: 0,
-        opacity: 0,
-        duration: 0.8,
+      gsap.fromTo(shapes,
+        { scale: 0, opacity: 0 },
+        {
+          scale: 1,
+          opacity: 1,
+          duration: 0.8,
         stagger: 0.15,
         ease: 'power3.out',
         scrollTrigger: {
