@@ -1020,8 +1020,90 @@ picture { display: block; max-width: 100%; }
   transform: scale3d(1.1, 1, 1);
 }
 
-/* ===== CONTACT ===== */
+/* ===== GALLERY SECTION ===== */
+.c-gallery {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #1E1915;
+  overflow: hidden;
+  border-bottom: 1px solid #EEE9CC;
+}
 
+.c-gallery_header {
+  position: absolute;
+  top: 5rem;
+  left: 1.25rem;
+  z-index: 10;
+}
+
+.c-gallery_title {
+  font-size: clamp(2rem, 8vw, 5rem);
+  font-weight: 400;
+  line-height: 0.95;
+  margin: 0;
+}
+
+.c-gallery_subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  opacity: 0.6;
+  margin-top: 0.5rem;
+}
+
+.c-gallery_track {
+  display: flex;
+  height: 100%;
+  padding: 0 1.25rem;
+  align-items: center;
+  gap: 10vw;
+  width: fit-content;
+}
+
+.c-gallery_item {
+  position: relative;
+  height: 60vh;
+  flex: 0 0 auto;
+}
+
+.c-gallery_item_img_wrap {
+  width: auto;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 2px;
+}
+
+.c-gallery_item_img {
+  display: block;
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.c-gallery_item_label {
+  position: absolute;
+  bottom: -2.5rem;
+  left: 0;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.6;
+}
+
+.c-gallery_empty {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-style: italic;
+  opacity: 0.5;
+}
+
+/* ===== CONTACT / LET'S TALK ===== */
 .c-contact {
   background-color: #EEE9CC;
   color: #1E1915;

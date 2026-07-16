@@ -4,6 +4,7 @@ import { Hero } from './components/Hero';
 import { Navbar } from './components/Navbar';
 import { AboutSection } from './components/AboutSection';
 import { WorkSection } from './components/WorkSection';
+import { GallerySection } from './components/GallerySection';
 import { ContactSection } from './components/ContactSection';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Hero />
         <AboutSection />
         <WorkSection />
+        <GallerySection />
         <ContactSection />
       </main>
     </>
