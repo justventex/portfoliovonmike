@@ -1024,77 +1024,83 @@ picture { display: block; max-width: 100%; }
 .c-gallery {
   position: relative;
   width: 100%;
-  height: 100vh;
-  background-color: #1E1915;
-  overflow: hidden;
-  border-bottom: 1px solid #EEE9CC;
+  padding: 5rem 1.25rem;
+  background-color: #EEE9CC;
+  color: #1E1915;
+  border-bottom: 1px solid #1E1915;
 }
 
-.c-gallery_header {
-  position: absolute;
-  top: 5rem;
-  left: 1.25rem;
-  z-index: 10;
-}
 
-.c-gallery_title {
-  font-size: clamp(2rem, 8vw, 5rem);
-  font-weight: 400;
-  line-height: 0.95;
-  margin: 0;
-}
-
-.c-gallery_subtitle {
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  opacity: 0.6;
-  margin-top: 0.5rem;
-}
 
 .c-gallery_track {
-  display: flex;
-  height: 100%;
-  padding: 0 1.25rem;
-  align-items: center;
-  gap: 10vw;
-  width: fit-content;
+  width: 100%;
+  column-count: 1;
+  column-gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .c-gallery_track {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c-gallery_track {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 1440px) {
+  .c-gallery_track {
+    column-count: 4;
+  }
 }
 
 .c-gallery_item {
   position: relative;
-  height: 60vh;
-  flex: 0 0 auto;
+  break-inside: avoid;
+  margin-bottom: 1.25rem;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .c-gallery_item_img_wrap {
-  width: auto;
-  height: 100%;
-  overflow: hidden;
+  width: 100%;
   position: relative;
-  border-radius: 2px;
+  border-radius: 8px;
 }
 
 .c-gallery_item_img {
   display: block;
-  height: 100%;
-  width: auto;
+  width: 100%;
+  height: auto;
   object-fit: cover;
-  will-change: transform;
-  transform: translateZ(0);
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+}
+
+.c-gallery_item:hover .c-gallery_item_img {
+  transform: scale(1.03);
 }
 
 .c-gallery_item_label {
   position: absolute;
-  bottom: -2.5rem;
-  left: 0;
-  font-size: 0.85rem;
+  bottom: 1rem;
+  left: 1rem;
+  background: rgba(238, 233, 204, 0.9);
+  color: #1E1915;
+  padding: 0.35rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  opacity: 0.6;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  pointer-events: none;
 }
 
 .c-gallery_empty {
   width: 100%;
-  height: 100%;
+  padding: 5rem 0;
   display: flex;
   align-items: center;
   justify-content: center;

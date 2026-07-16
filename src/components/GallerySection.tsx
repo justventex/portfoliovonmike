@@ -1,8 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
 
 interface GalleryItem {
   src: string;
@@ -48,51 +45,16 @@ const galleryItems: GalleryItem[] = [
 
 export const GallerySection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const trackRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!sectionRef.current || !trackRef.current) return;
-    if (galleryItems.length === 0) return;
-
-    const track = trackRef.current;
-    const scrollWidth = track.scrollWidth - track.clientWidth;
+    if (!sectionRef.current) return;
 
     const ctx = gsap.context(() => {
-      // Horizontal scroll driven by vertical scroll
-      gsap.to(track, {
-        x: -scrollWidth,
+      gsap.to('.c-gallery_marquee', {
+        xPercent: -50,
+        repeat: -1,
+        duration: 15,
         ease: 'none',
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top top',
-          end: () => `+=${scrollWidth}`,
-          scrub: 1,
-          pin: true,
-          anticipatePin: 1,
-          invalidateOnRefresh: true,
-        },
-      });
-
-      // Parallax effect on individual items
-      const items = track.querySelectorAll('.c-gallery_item');
-      items.forEach((item) => {
-        const img = item.querySelector('.c-gallery_item_img');
-        if (img) {
-          gsap.fromTo(img,
-            { scale: 1.15 },
-            {
-              scale: 1,
-              ease: 'none',
-              scrollTrigger: {
-                trigger: item,
-                containerAnimation: gsap.getById?.('gallery-scroll') || undefined,
-                start: 'left right',
-                end: 'right left',
-                scrub: true,
-              },
-            }
-          );
-        }
       });
     }, sectionRef);
 
@@ -101,14 +63,17 @@ export const GallerySection: React.FC = () => {
 
   return (
     <section ref={sectionRef} className="c-gallery" id="galerie">
-      {/* Section header */}
-      <div className="c-gallery_header">
-        <h2 className="c-gallery_title">Galerie</h2>
-        <p className="c-gallery_subtitle">Fotografie & Design</p>
+      {/* Animated Marquee Header */}
+      <div className="c-projects_header" style={{ overflow: 'hidden', whiteSpace: 'nowrap', borderTop: 'none', paddingBottom: '3rem' }}>
+        <div className="c-gallery_marquee" style={{ display: 'inline-flex' }}>
+          {[...Array(6)].map((_, i) => (
+            <h2 key={i} className="c-projects_title" style={{ paddingRight: '1em' }}>Galerie</h2>
+          ))}
+        </div>
       </div>
 
       {galleryItems.length > 0 ? (
-        <div className="c-gallery_track" ref={trackRef}>
+        <div className="c-gallery_track">
           {galleryItems.map((item, i) => (
             <div key={i} className="c-gallery_item">
               <div className="c-gallery_item_img_wrap">
@@ -119,9 +84,6 @@ export const GallerySection: React.FC = () => {
                   loading="lazy"
                 />
               </div>
-              {item.category && (
-                <span className="c-gallery_item_label">{item.category}</span>
-              )}
             </div>
           ))}
         </div>

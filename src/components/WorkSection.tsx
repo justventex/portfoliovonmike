@@ -31,6 +31,17 @@ interface ProjectItem {
 }
 
 const projects: ProjectItem[] = [
+  {
+    id: 'six-conventionpoint-werbeflaechen',
+    title: 'SIX ConventionPoint Werbeflächen — IPA',
+    description: 'Abschlussarbeit (IPA)',
+    year: '2024',
+    tags: 'Corporate – Werbung – Konzept – IPA',
+    context: 'Werbeflächenkonzept für den SIX ConventionPoint — realisiert als individuelle praktische Abschlussarbeit (IPA). Visuelle Aufbereitung und Präsentation.',
+    media: [
+      { type: 'youtube', url: 'i08ObUDM0yA', label: 'ConventionPoint Werbeflächen' },
+    ],
+  },
   // ——— FILM & KURZFILM ———
   {
     id: 'the-image-film',
@@ -54,6 +65,21 @@ const projects: ProjectItem[] = [
       { type: 'youtube', url: 'oLBJqW3rcT4', label: 'Hirnchips und Full Dive KI' },
     ],
   },
+  // ——— SOCIAL MEDIA & SHORTS ———
+  {
+    id: 'trader-shorts-900k',
+    title: 'Trading Shorts (900k+ Views)',
+    description: 'Social Media Kurzvideos',
+    year: '2025',
+    tags: 'Social Media – Shorts – Reels – TikTok',
+    context: 'Produktion von vier performanten Kurzvideos für einen Trader. Die Videos erreichten organisch insgesamt über 900.000 Aufrufe.',
+    media: [
+      { type: 'video', url: 'https://res.cloudinary.com/uhg6huuz/video/upload/v1784231665/Top3Paare_fusgxq.mp4', label: 'Top 3 Paare' },
+      { type: 'video', url: 'https://res.cloudinary.com/uhg6huuz/video/upload/v1784231523/Startkapital_wv0iro.mp4', label: 'Startkapital' },
+      { type: 'video', url: 'https://res.cloudinary.com/uhg6huuz/video/upload/v1784231388/beste_Hotel_yjquta.mp4', label: 'Bestes Hotel' },
+      { type: 'video', url: 'https://res.cloudinary.com/uhg6huuz/video/upload/v1784231328/0319_Nr1_oe5tou.mp4', label: 'Nr 1' },
+    ],
+  },
   {
     id: 'house-of-feelings',
     title: 'House of Feelings',
@@ -65,6 +91,21 @@ const projects: ProjectItem[] = [
       { type: 'youtube', url: 'Fjcmb-lewuo', label: 'Promo Clip' },
       { type: 'youtube', url: 'g3n5jhRnWB8', label: 'Episode Scene' },
       { type: 'youtube', url: 'ELReM9oQoTs', label: 'Episode Scene 2' },
+    ],
+  },
+  // ——— DESIGN & ART DIRECTION ———
+  {
+    id: 'house-of-feelings-design',
+    title: 'House of Feelings Design',
+    description: 'TV Show Design',
+    year: '2026',
+    tags: 'Design – Art Direction – TV Show',
+    context: 'Visuelle Gestaltung und Design-Assets für die TV Show «House of Feelings».',
+    media: [
+      { type: 'image', url: 'https://res.cloudinary.com/uhg6huuz/image/upload/v1784230679/HOFEP2V13_ylnrlw.png', label: 'Design 1' },
+      { type: 'image', url: 'https://res.cloudinary.com/uhg6huuz/image/upload/v1784230647/HOFEP2V8_i89g2i.png', label: 'Design 2' },
+      { type: 'image', url: 'https://res.cloudinary.com/uhg6huuz/image/upload/v1784230637/HOFEP2v4_tb5cyo.png', label: 'Design 3' },
+      { type: 'image', url: 'https://res.cloudinary.com/uhg6huuz/image/upload/v1784230693/ReleaseSchedule_fxb0qe.png', label: 'Release Schedule' },
     ],
   },
   // ——— CORPORATE VIDEO & PROMO ———
@@ -88,28 +129,6 @@ const projects: ProjectItem[] = [
     context: 'Videoproduktion für das Statement Basisseminar. Event-Dokumentation und Zusammenschnitt.',
     media: [
       { type: 'youtube', url: 'raFCjID6vTw', label: 'Statement Basisseminar' },
-    ],
-  },
-  {
-    id: 'promo-autovermietung',
-    title: 'Promo Autovermietung',
-    description: 'Werbespot',
-    year: '2024',
-    tags: 'Promo – Werbung – Automotive',
-    context: 'Promotionvideo für eine Autovermietung. Visuelle Inszenierung und dynamischer Schnitt.',
-    media: [
-      { type: 'youtube', url: 'jCA-m0R0WY8', label: 'Promo Autovermietung' },
-    ],
-  },
-  {
-    id: 'six-conventionpoint-werbeflaechen',
-    title: 'SIX ConventionPoint Werbeflächen — IPA',
-    description: 'Abschlussarbeit (IPA)',
-    year: '2024',
-    tags: 'Corporate – Werbung – Konzept – IPA',
-    context: 'Werbeflächenkonzept für den SIX ConventionPoint — realisiert als individuelle praktische Abschlussarbeit (IPA). Visuelle Aufbereitung und Präsentation.',
-    media: [
-      { type: 'youtube', url: 'i08ObUDM0yA', label: 'ConventionPoint Werbeflächen' },
     ],
   },
   {
@@ -180,6 +199,17 @@ const projects: ProjectItem[] = [
       { type: 'youtube', url: 'GmE036JMVSI', label: '3D Typography Scene' },
     ],
   },
+  {
+    id: 'promo-autovermietung',
+    title: 'Promo Autovermietung',
+    description: 'Werbespot',
+    year: '2024',
+    tags: 'Promo – Werbung – Automotive',
+    context: 'Promotionvideo für eine Autovermietung. Visuelle Inszenierung und dynamischer Schnitt.',
+    media: [
+      { type: 'youtube', url: 'jCA-m0R0WY8', label: 'Promo Autovermietung' },
+    ],
+  },
 ];
 
 /* ===== MEDIA CAROUSEL (images + videos + youtube unified) ===== */
@@ -219,7 +249,7 @@ const MediaCarousel: React.FC<{ items: MediaItem[] }> = ({ items }) => {
             {item.type === 'youtube' ? (
               <div className="c-carousel_youtube">
                 <iframe
-                  src={`https://www.youtube.com/embed/${item.url}`}
+                  src={`https://www.youtube-nocookie.com/embed/${item.url}`}
                   title={item.label || 'YouTube Video'}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
