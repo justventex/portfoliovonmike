@@ -9,38 +9,38 @@ interface GalleryItem {
 
 const galleryItems: GalleryItem[] = [
   // Gruppe: IMG_7 Serie
-  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/v1784230572/IMG_7211_uulpor.jpg', alt: 'Fotografie Serie 1', category: 'Fotografie' },
-  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/v1784230563/IMG_7223_bqxkbz.jpg', alt: 'Fotografie Serie 1', category: 'Fotografie' },
-  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/v1784230406/IMG_7227_s9twux.jpg', alt: 'Fotografie Serie 1', category: 'Fotografie' },
-  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/v1784230471/IMG_7402_lqahjy.jpg', alt: 'Fotografie Serie 1', category: 'Fotografie' },
-  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/v1784230504/IMG_7495_k543yr.jpg', alt: 'Fotografie Serie 1', category: 'Fotografie' },
-  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/v1784230520/IMG_7521_zmlbq3.jpg', alt: 'Fotografie Serie 1', category: 'Fotografie' },
+  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/q_auto:best,f_auto,w_1600/v1784230572/IMG_7211_uulpor.jpg', alt: 'Fotografie Serie 1', category: 'Fotografie' },
+  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/q_auto:best,f_auto,w_1600/v1784230563/IMG_7223_bqxkbz.jpg', alt: 'Fotografie Serie 1', category: 'Fotografie' },
+  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/q_auto:best,f_auto,w_1600/v1784230406/IMG_7227_s9twux.jpg', alt: 'Fotografie Serie 1', category: 'Fotografie' },
+  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/q_auto:best,f_auto,w_1600/v1784230471/IMG_7402_lqahjy.jpg', alt: 'Fotografie Serie 1', category: 'Fotografie' },
+  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/q_auto:best,f_auto,w_1600/v1784230504/IMG_7495_k543yr.jpg', alt: 'Fotografie Serie 1', category: 'Fotografie' },
+  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/q_auto:best,f_auto,w_1600/v1784230520/IMG_7521_zmlbq3.jpg', alt: 'Fotografie Serie 1', category: 'Fotografie' },
 
   // Gruppe: IMG_9 Serie
-  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/v1784230305/IMG_9294_rac9e1.jpg', alt: 'Fotografie Serie 2', category: 'Fotografie' },
-  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/v1784230304/IMG_9300_qw7tm8.jpg', alt: 'Fotografie Serie 2', category: 'Fotografie' },
-  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/v1784230305/IMG_9303_xrbdaw.jpg', alt: 'Fotografie Serie 2', category: 'Fotografie' },
-  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/v1784230304/IMG_9311_zfrsrd.jpg', alt: 'Fotografie Serie 2', category: 'Fotografie' },
-  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/v1784230328/IMG_9330_jxpyn2.jpg', alt: 'Fotografie Serie 2', category: 'Fotografie' },
+  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/q_auto:best,f_auto,w_1600/v1784230305/IMG_9294_rac9e1.jpg', alt: 'Fotografie Serie 2', category: 'Fotografie' },
+  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/q_auto:best,f_auto,w_1600/v1784230304/IMG_9300_qw7tm8.jpg', alt: 'Fotografie Serie 2', category: 'Fotografie' },
+  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/q_auto:best,f_auto,w_1600/v1784230305/IMG_9303_xrbdaw.jpg', alt: 'Fotografie Serie 2', category: 'Fotografie' },
+  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/q_auto:best,f_auto,w_1600/v1784230304/IMG_9311_zfrsrd.jpg', alt: 'Fotografie Serie 2', category: 'Fotografie' },
+  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/q_auto:best,f_auto,w_1600/v1784230328/IMG_9330_jxpyn2.jpg', alt: 'Fotografie Serie 2', category: 'Fotografie' },
 
   // Gruppe: IRA Serie
-  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/v1784225862/IRA-08843_aiqign.webp', alt: 'Eventfotografie Serie', category: 'Fotografie' },
-  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/v1784225862/IRA-08876-0_lzrg5i.webp', alt: 'Eventfotografie Serie', category: 'Fotografie' },
-  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/v1784225861/IRA-08889_uud7ct.webp', alt: 'Eventfotografie Serie', category: 'Fotografie' },
-  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/v1784225861/IRA-08892_nmf2uj.webp', alt: 'Eventfotografie Serie', category: 'Fotografie' },
-  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/v1784225862/IRA-08904_ism6oo.webp', alt: 'Eventfotografie Serie', category: 'Fotografie' },
-  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/v1784225862/IRA-08908_x9dvuz.webp', alt: 'Eventfotografie Serie', category: 'Fotografie' },
+  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/q_auto:best,f_auto,w_1600/v1784225862/IRA-08843_aiqign.webp', alt: 'Eventfotografie Serie', category: 'Fotografie' },
+  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/q_auto:best,f_auto,w_1600/v1784225862/IRA-08876-0_lzrg5i.webp', alt: 'Eventfotografie Serie', category: 'Fotografie' },
+  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/q_auto:best,f_auto,w_1600/v1784225861/IRA-08889_uud7ct.webp', alt: 'Eventfotografie Serie', category: 'Fotografie' },
+  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/q_auto:best,f_auto,w_1600/v1784225861/IRA-08892_nmf2uj.webp', alt: 'Eventfotografie Serie', category: 'Fotografie' },
+  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/q_auto:best,f_auto,w_1600/v1784225862/IRA-08904_ism6oo.webp', alt: 'Eventfotografie Serie', category: 'Fotografie' },
+  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/q_auto:best,f_auto,w_1600/v1784225862/IRA-08908_x9dvuz.webp', alt: 'Eventfotografie Serie', category: 'Fotografie' },
 
   // Gruppe: Produkte
-  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/v1784225862/Produkt_01.Gruppe_C_1_pqx1ke.webp', alt: 'Produktfotografie', category: 'Produktfotografie' },
-  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/v1784225862/Produkt_02.Gruppe_C_1_o5hubo.webp', alt: 'Produktfotografie', category: 'Produktfotografie' },
-  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/v1784225862/Produkt_03.Gruppe_C_bchkdm.webp', alt: 'Produktfotografie', category: 'Produktfotografie' },
-  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/v1784225659/Produkt_04.Gruppe_C_zxunfl.webp', alt: 'Produktfotografie', category: 'Produktfotografie' },
+  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/q_auto:best,f_auto,w_1600/v1784225862/Produkt_01.Gruppe_C_1_pqx1ke.webp', alt: 'Produktfotografie', category: 'Produktfotografie' },
+  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/q_auto:best,f_auto,w_1600/v1784225862/Produkt_02.Gruppe_C_1_o5hubo.webp', alt: 'Produktfotografie', category: 'Produktfotografie' },
+  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/q_auto:best,f_auto,w_1600/v1784225862/Produkt_03.Gruppe_C_bchkdm.webp', alt: 'Produktfotografie', category: 'Produktfotografie' },
+  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/q_auto:best,f_auto,w_1600/v1784225659/Produkt_04.Gruppe_C_zxunfl.webp', alt: 'Produktfotografie', category: 'Produktfotografie' },
 
   // Weitere
-  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/v1784225863/MicrosoftTeams-image_15_bkskif.webp', alt: 'Fotografie', category: 'Fotografie' },
-  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/v1784225863/MicrosoftTeams-image_16_p1jheg.webp', alt: 'Fotografie', category: 'Fotografie' },
-  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/v1784225966/01_Perfume_Mock-up__bottle_box__top_view_ejw86h.png', alt: 'Perfume Mock-up', category: 'Produktfotografie' },
+  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/q_auto:best,f_auto,w_1600/v1784225863/MicrosoftTeams-image_15_bkskif.webp', alt: 'Fotografie', category: 'Fotografie' },
+  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/q_auto:best,f_auto,w_1600/v1784225863/MicrosoftTeams-image_16_p1jheg.webp', alt: 'Fotografie', category: 'Fotografie' },
+  { src: 'https://res.cloudinary.com/uhg6huuz/image/upload/q_auto:best,f_auto,w_1600/v1784225966/01_Perfume_Mock-up__bottle_box__top_view_ejw86h.png', alt: 'Perfume Mock-up', category: 'Produktfotografie' },
 ];
 
 export const GallerySection: React.FC = () => {

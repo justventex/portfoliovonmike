@@ -102,10 +102,10 @@ const projects: ProjectItem[] = [
     tags: 'Design – Art Direction – TV Show',
     context: 'Visuelle Gestaltung und Design-Assets für die TV Show «House of Feelings».',
     media: [
-      { type: 'image', url: 'https://res.cloudinary.com/uhg6huuz/image/upload/v1784230679/HOFEP2V13_ylnrlw.png', label: 'Design 1' },
-      { type: 'image', url: 'https://res.cloudinary.com/uhg6huuz/image/upload/v1784230647/HOFEP2V8_i89g2i.png', label: 'Design 2' },
-      { type: 'image', url: 'https://res.cloudinary.com/uhg6huuz/image/upload/v1784230637/HOFEP2v4_tb5cyo.png', label: 'Design 3' },
-      { type: 'image', url: 'https://res.cloudinary.com/uhg6huuz/image/upload/v1784230693/ReleaseSchedule_fxb0qe.png', label: 'Release Schedule' },
+      { type: 'image', url: 'https://res.cloudinary.com/uhg6huuz/image/upload/q_auto:best,f_auto,w_1600/v1784230679/HOFEP2V13_ylnrlw.png', label: 'Design 1' },
+      { type: 'image', url: 'https://res.cloudinary.com/uhg6huuz/image/upload/q_auto:best,f_auto,w_1600/v1784230647/HOFEP2V8_i89g2i.png', label: 'Design 2' },
+      { type: 'image', url: 'https://res.cloudinary.com/uhg6huuz/image/upload/q_auto:best,f_auto,w_1600/v1784230637/HOFEP2v4_tb5cyo.png', label: 'Design 3' },
+      { type: 'image', url: 'https://res.cloudinary.com/uhg6huuz/image/upload/q_auto:best,f_auto,w_1600/v1784230693/ReleaseSchedule_fxb0qe.png', label: 'Release Schedule' },
     ],
   },
   // ——— CORPORATE VIDEO & PROMO ———
